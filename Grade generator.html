@@ -1,0 +1,132 @@
+<!-- Prof. John wants to make the grade calculator so much she can easily carry out the grades according to the marks. He needs your help to do it. Will you help Prof. John to make this thing happen
+Your Task: Create a grade generator that takes input as marks from the user and displays the grade in an ordered manner in the page.
+Refer the desired output -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: url(https://i.pinimg.com/736x/50/35/4f/50354fc11d2e0e87de8fc344e1f92264.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        div
+        {
+            height: 150px;
+            width: 475px;
+            margin-top:200px ;
+            margin-left: 380px;
+            background-color: rgb(208, 170, 243);
+            padding: 30px;
+            border-radius: 10%;
+            border: solid 3px rgb(63, 13, 109);
+            padding-top: 0px;
+        }
+        h1
+        {
+            margin-left: 100px;
+            color: rgb(63, 13, 109);
+        }
+        label
+        {
+            color: rgb(63, 13, 109);
+        }
+        input
+        {
+            color: rgb(63, 13, 109);
+            background-color: rgb(208, 170, 243);
+            border: solid 3px rgb(63, 13, 109);
+            border-radius: 10%;
+        }
+        button
+        {
+            color: rgb(63, 13, 109);
+            background-color: rgb(208, 170, 243);
+            border: solid 3px rgb(63, 13, 109);
+            border-radius: 10%;
+        }
+        p
+        {
+            color: rgb(63, 13, 109);
+            margin-left: 175px;
+            font-size: larger;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @media (max-width:800px) {
+                body{background: url(https://img.freepik.com/free-vector/detailed-hand-painted-pink-watercolour-background_1048-17039.jpg?semt=ais_hybrid&w=740&q=80);}
+            #ans{color:black}
+        }
+        @media (max-width:400px){
+            body{background-color:plum ;}
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Grade Generator</h1>
+    <label for="mark">Enter Mark Percentage:</label>
+    <input type="number"id="mark">
+    <button onclick="grade()">Generate Grade</button>
+    <p id="ans"></p>
+</div>
+    <script>
+        function grade()
+        {
+            let mark= Number(document.getElementById('mark').value)
+
+        if(mark<=100 && mark>=90)
+        {
+            document.getElementById('ans').innerHTML="You Got An A+ !"
+        }
+        else if(mark<=89 && mark>=85)
+        {
+            document.getElementById('ans').innerHTML="You Got An A !"
+        }
+        else if(mark<=84 && mark>=80)
+        {
+            document.getElementById('ans').innerHTML="You Got An A- !"
+        }
+        else if(mark<=79 && mark>=77)
+        {
+            document.getElementById('ans').innerHTML="You Got A B+ !"
+        }
+        else if(mark<=76 && mark>=73)
+        {
+            document.getElementById('ans').innerHTML="You Got A B !"
+        }
+        else if(mark<=72 && mark>=70)
+        {
+            document.getElementById('ans').innerHTML="You Got A B- !"
+        }
+        else if(mark<=69 && mark>=65)
+        {
+            document.getElementById('ans').innerHTML="You Got A C+"
+        }
+        else if(mark<=64 && mark>=60)
+        {
+            document.getElementById('ans').innerHTML="You Got A C"
+        }
+        else if(mark<=59 && mark>=55)
+        {
+            document.getElementById('ans').innerHTML="You Got A C-"
+        }
+        else if(mark<=54 && mark>=50)
+        {
+            document.getElementById('ans').innerHTML="You Got A D"
+        }
+        else if(mark<=49 && mark>=0)
+        {
+            document.getElementById('ans').innerHTML="You Got An F"
+        }
+        else
+        {
+            document.getElementById('ans').innerHTML="Invalid Mark !"
+        }
+        }
+    </script>
+</body>
+</html>
